@@ -28,7 +28,13 @@ const AddForm = (props) => {
             props.fetchError('All fields are required')
         } else {
             //dispatch an addSmurf action
-            props.addSmurfs(state)
+            addSmurf(state)
+            setState({
+                name: '',
+                position: '',
+                nickname: '',
+                description: ''
+            })
         }
     }
 
