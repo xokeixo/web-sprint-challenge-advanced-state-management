@@ -1,4 +1,4 @@
-import { START_FETCH, FETCH_SUCCESS, FETCH_ERROR, ADD_SMURF } from '../actions';
+import { FETCH_START, FETCH_SUCCESS, FETCH_ERROR, ADD_SMURF } from '../actions';
 
 export const initialState = {
    smurfs: [],
@@ -8,7 +8,7 @@ export const initialState = {
 
 const reducer = (state = initialState, action)=>{
     switch(action.type) {
-        case START_FETCH: 
+        case FETCH_START: 
             return {
                 ...state,
                 isLoading: true
@@ -33,6 +33,7 @@ const reducer = (state = initialState, action)=>{
             }
         default:
             return state;
+        }
 };
 
 //**************DO NOT EDIT ANY CODE BEYOND THIS POINT**************//
